@@ -1,0 +1,8 @@
+{% load i18n %}{% autoescape off %}
+{% trans "activate_email_title" %}
+
+{% trans "activate_email_text" %}
+{% block reset_link %}
+http://127.0.0.1:8000{% url 'users:activate' username %}
+{% endblock %}
+{% endautoescape %}

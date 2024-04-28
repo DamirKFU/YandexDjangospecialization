@@ -1,0 +1,90 @@
+{% load static %}
+{% load i18n %}
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e9ecef">
+    <div class="container">
+      <a class="navbar-brand" href="{% url 'homepage:main' %}">
+        <img src="{% static 'img/logo.png' %}" width="30" height="30" class="d-inline-block align-top" alt="">
+        {% trans "brand_name"|capfirst %}
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      {% with request.resolver_match.view_name as view_name %}
+      <div class="collapse navbar-collapse multi-collapse justify-content-end" id="navbarNav">
+        <ul class="nav navbar-nav">
+          <li class="nav-item navbar-brand">
+            <a class="nav-link {% if view_name == 'homepage:main' %}active{% endif %}" href="{% url 'homepage:main' %}">
+              {% trans "home"|capfirst %}
+            </a>
+          </li>
+          <li class="nav-item navbar-brand">
+            <a class="nav-link {% if view_name == 'about:main' %}active{% endif %}" href="{% url 'about:main' %}">
+              {% trans "about_title"|capfirst %}
+            </a>
+          </li>
+          <li class="nav-item navbar-brand">
+            <a class="nav-link {% if view_name in 'catalog:maincatalog:newcatalog:fridaycatalog:unverified' %}active{% endif %}" href="{% url 'catalog:main' %}">
+              {% trans "item_list_title"|capfirst %}
+            </a>
+          </li>
+          <li class="nav-item navbar-brand">
+            <a class="nav-link {% if view_name == 'feedback:feedback' %}active{% endif %}" href="{% url 'feedback:feedback' %}">
+              {% trans "feedback_title"|capfirst %}
+            </a>
+          </li>
+          <li class="nav-item navbar-brand">
+            <a class="nav-link" href="{% url 'users:user_list' %}">
+              {% trans "user_list_title"|capfirst %}
+            </a>
+          </li>
+          {% if user.is_authenticated %}
+            {% if user.is_superuser %}
+              <li class="nav-item navbar-brand">
+                <a class="nav-link" href="{% url 'admin:index' %}">
+                  {% trans "admin_title"|capfirst %}
+                </a>
+              </li>
+            {% endif %}
+            <li class="nav-item navbar-brand">
+              <a class="nav-link {% if view_name == 'users:profile' %}active{% endif %}" href="{% url 'users:profile' %}">
+                {% trans "profile_title"|capfirst %}
+              </a>
+            </li>
+            <li class="nav-item navbar-brand">
+              <a class="nav-link {% if view_name == 'users:logout' %}active{% endif %}" href="{% url 'users:logout' %}">
+                {% trans "logout_title"|capfirst %}
+              </a>
+            </li>
+            <li class="nav-item navbar-brand">
+              <a class="nav-link {% if view_name == 'statistic:by-user:graded-items:by-items' %}active{% endif %}" href="{% url 'statistic:by-user' %}">
+                {% trans "statistics"|capfirst %}
+              </a>
+            </li>
+            {% else %}
+              <li class="nav-item navbar-brand">
+                <a class="nav-link {% if view_name == 'users:login' %}active{% endif %}" href="{% url 'users:login' %}">
+                  {% trans "login_title"|capfirst %}
+                </a>
+              </li>
+          {% endif %}
+        </ul>
+      </div>
+      {% endwith %}
+    </div>
+  </nav>
+  {% if birthdays  %}
+    <div class="container mt-3">
+      <div class="container-fluid">
+        <div class="row flex-nowrap" style="overflow-x: scroll;">
+          {% for elem in birthdays %}
+            <div class="col-2 px-0 pm-1 text-center">
+                <div class="card card-block">{{ elem.username }} {{ elem.email }}</div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+</header>

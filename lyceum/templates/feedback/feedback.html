@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+
+{% block title %}
+  {% trans "feedback_title"|capfirst %}
+{% endblock title %}
+
+{% block content %}
+{% if messages %}
+  {% for message in messages %}
+    {% if  message.tags == "error" %}
+      <div class="alert alert-danger" role="alert">
+    {% else %}
+      <div class="alert alert-success" role="alert">
+    {% endif %}
+    {{ message }}
+    </div>
+  {% endfor %}
+{% endif %}
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {% include "includes/form.html" with be_button=True form=form %}
+</form>
+{% endblock content %}

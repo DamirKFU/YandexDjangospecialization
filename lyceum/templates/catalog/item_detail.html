@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}
+{% trans "item_detail_title"|capfirst %}
+{% endblock title %}
+
+{% block content %}
+  {% if messages %}
+    {% for message in messages %}
+      {% if  message.tags == "error" %}
+      <div class="alert alert-danger" role="alert">
+      {% else %}
+      <div class="alert alert-success" role="alert">
+      {% endif %}
+      {{ message }}
+      </div>
+    {% endfor %}
+  {% endif %}
+  <div class="d-flex flex-wrap justify-content-between">
+    <h1 class="pb-2 mb-0">{{ item.name }}</h1>
+    <h1 class="pb-2 mb-0">{% trans "grade_count"|capfirst %}: {{ item.count_grade }}</h1>
+    <h1 class="pb-2 mb-0">{% trans "rating"|capfirst %}: {% if item.rating %}{{ item.rating|safe }}{% else %}{% trans "no_rating" %}{% endif %}</h1>
+  </div>
+  <div class="d-flex flex-wrap">
+    {% for tag in item.tags.all %}
+      <span class="badge bg-secondary ms-1">{{ tag.name }}</span>
+    {% endfor %}
+  </div>
+  <div class="row mt-3 mb-3">
+    <div class="col-12 col-md-6">
+      <h2>{% trans "description"|capfirst %}</h2>
+        {{ item.text|safe }}
+    </div>
+    <div class="col-12 col-md-6 mb-5">
+      <div class="mw-413 mh-413 position-relative d-inline-block">
+        <img
+          class="img-fluid"
+          {% if item.main_image %}
+            src="{{ item.main_image.get_image_413x413.url }}"
+          {% else %}
+            src="{% static 'img/image-holder.png' %}"
+            height=413
+            width=413
+          {% endif %}
+          alt="{% trans 'item_image' %}"
+        >
+        {% if item.main_image %}
+        <a href="{% url 'download:main' item.main_image.image.name %}" class="position-absolute top-0 end-0 btn btn-primary" download>
+          <svg class="bi bi-download" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+            <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+          </svg>
+        </a>
+        {% endif %}
+      </div>
+    </div>
+    {% if user.is_authenticated %}
+      <form method="post">
+        {% csrf_token %}
+        {% include "includes/form.html" with be_button=True form=form %}
+        {% if form.instance.id %}
+          <a href="{% url "rating:delete" item.id %}" type="button" class="btn btn-danger">{% trans "delete" %}</a>
+        {% endif %}
+      </form>
+    {% endif %}
+  </div>
+  <hr>
+  <div class="d-flex flex-wrap">
+    {% for image in  item.images.all %}
+      <div class="col-12 col-md-1 mb-3">
+        <div class="mw-108 mh-108 position-relative d-inline-block border border-black">
+          <img
+            class="img-fluid"
+            src="{{ image.get_image_300x300.url }}"
+            alt="{% trans 'item_image' %}"
+          >
+          <a href="{% url 'download:main' image.image.name %}" type="button" class="px-1 py-0 position-absolute top-0 end-0 btn btn-primary" download>
+            <svg class="bi bi-download" width="16" height="12" fill="currentColor" viewBox="0 0 16 20">
+              <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+              <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock content %}

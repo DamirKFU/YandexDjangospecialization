@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+
+{% block title %}
+  {% trans "echo_title"|capfirst %}
+{% endblock title %}
+
+{% block content %}
+<form method="POST" action={% url "homepage:echo_submit" %}>
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit" class="btn btn-primary">{% trans "submit" %}</button>
+</form>
+{% endblock content %}

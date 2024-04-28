@@ -1,0 +1,52 @@
+{% load static %}
+{% load i18n %}
+{% trans "nobody" as nobody %}
+<div class="col-6 col-md-4 my-1 d-flex align-items-stretch">
+  <div class="card">
+    <img
+      class="img-fluid card-img-top"
+      {% if item.main_image %}
+        src="{{ item.main_image.get_image_413x413.url }}"
+      {% else %}
+        src="{% static 'img/image-holder.png' %}"
+      {% endif %}
+      alt="{% trans 'item_image'|capfirst %}"
+    >
+    <div class="card-body d-flex flex-column">
+      <h5 class="card-title">{{ item.name }}</h5>
+      <div class="border mb-3 rounded">
+        <div class="card-header">
+          {% trans "grade_count"|capfirst %}
+        </div>
+        <ul class="list-group list-group-flush rounded">
+          <li class="list-group-item">{{ item.count_grades|default:0 }}</li>
+        </ul>
+      </div>
+      <div class="border mb-3 rounded">
+        <div class="card-header">
+          {% trans "rating"|capfirst %}
+        </div>
+        <ul class="list-group list-group-flush rounded">
+          <li class="list-group-item">{{ item.avg_grades|floatformat|default:0 }}</li>
+        </ul>
+      </div>
+      <div class="border mb-3 rounded">
+        <div class="card-header">
+          {% trans "max_user_grade"|capfirst %}
+        </div>
+        <ul class="list-group list-group-flush rounded">
+          <li class="list-group-item">{{ item.love|default:nobody|truncatechars:15 }}</li>
+        </ul>
+      </div>
+      <div class="border mb-3 rounded">
+        <div class="card-header">
+          {% trans "min_user_grade"|capfirst %}
+        </div>
+        <ul class="list-group list-group-flush rounded">
+          <li class="list-group-item">{{ item.hate|default:nobody|truncatechars:15 }}</li>
+        </ul>
+      </div>
+      <a href={% url 'catalog:item_detail' pk=item.id %} class="mt-auto btn btn-md btn-block btn-primary">{% trans "more_details"|capfirst %}</a>
+    </div>
+  </div>
+</div>

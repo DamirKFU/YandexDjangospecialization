@@ -1,0 +1,332 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-30 15:24+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: catalog/views.py:39
+msgid "message_grade_save_success"
+msgstr "your rating has been successfully saved"
+
+#: catalog/views.py:45 templates/catalog/item_list.html:6
+#: templates/catalog/item_list.html:14 templates/includes/header.html:28
+msgid "item_list_title"
+msgstr "product list"
+
+#: catalog/views.py:97 templates/catalog/item_list.html:17
+msgid "new"
+msgstr ""
+
+#: catalog/views.py:118 templates/catalog/item_list.html:20
+msgid "friday"
+msgstr ""
+
+#: catalog/views.py:133 templates/catalog/item_list.html:23
+msgid "unverified"
+msgstr ""
+
+#: feedback/models.py:11
+msgid "new_status"
+msgstr "received"
+
+#: feedback/models.py:12
+msgid "pending_status"
+msgstr "processing"
+
+#: feedback/models.py:13
+msgid "complete_status"
+msgstr "answer given"
+
+#: feedback/views.py:41
+msgid "message_form_success"
+msgstr "form submitted successfully"
+
+#: lyceum/settings.py:139
+msgid "Russian"
+msgstr ""
+
+#: lyceum/settings.py:140
+msgid "English"
+msgstr ""
+
+#: templates/about/description.html:6 templates/about/description.html:10
+#: templates/includes/header.html:23
+msgid "about_title"
+msgstr "about"
+
+#: templates/about/description.html:13
+msgid "about_text"
+msgstr "A very convincing description that will make you come back here"
+
+#: templates/catalog/item_detail.html:6
+msgid "item_detail_title"
+msgstr "about the product"
+
+#: templates/catalog/item_detail.html:23
+#: templates/includes/statistic_item_card.html:19
+msgid "grade_count"
+msgstr "number of grades"
+
+#: templates/catalog/item_detail.html:24
+#: templates/includes/statistic_item_card.html:27
+msgid "rating"
+msgstr ""
+
+#: templates/catalog/item_detail.html:24
+msgid "no_rating"
+msgstr ""
+
+#: templates/catalog/item_detail.html:33 templates/includes/item_card.html:26
+msgid "description"
+msgstr ""
+
+#: templates/catalog/item_detail.html:47 templates/catalog/item_detail.html:77
+#: templates/includes/item_card.html:12
+#: templates/includes/statistic_item_card.html:13
+msgid "item_image"
+msgstr "item image"
+
+#: templates/catalog/item_detail.html:64
+msgid "delete"
+msgstr ""
+
+#: templates/catalog/item_list.html:46 templates/homepage/index.html:30
+#: templates/users/user_list.html:22
+msgid "empty"
+msgstr ""
+
+#: templates/feedback/feedback.html:6 templates/includes/header.html:33
+msgid "feedback_title"
+msgstr "feedback"
+
+#: templates/homepage/echo.html:6
+msgid "echo_title"
+msgstr "echo"
+
+#: templates/homepage/echo.html:13 templates/includes/form.html:37
+msgid "submit"
+msgstr ""
+
+#: templates/homepage/index.html:6 templates/homepage/index.html:21
+msgid "homepage_title"
+msgstr "homepage"
+
+#: templates/includes/footer.html:20
+msgid "go"
+msgstr ""
+
+#: templates/includes/header.html:8
+msgid "brand_name"
+msgstr "super-brand"
+
+#: templates/includes/header.html:18 templates/users/logout.html:13
+#: templates/users/password_change_done.html:13
+#: templates/users/password_reset_complete.html:12
+#: templates/users/password_reset_done.html:12
+msgid "home"
+msgstr ""
+
+#: templates/includes/header.html:38 templates/users/user_list.html:7
+#: templates/users/user_list.html:11
+msgid "user_list_title"
+msgstr "user list"
+
+#: templates/includes/header.html:45
+msgid "admin_title"
+msgstr "admin"
+
+#: templates/includes/header.html:51 templates/users/profile.html:7
+msgid "profile_title"
+msgstr "profile"
+
+#: templates/includes/header.html:56
+msgid "logout_title"
+msgstr "logout"
+
+#: templates/includes/header.html:61 templates/statistic_base.html:21
+msgid "statistics"
+msgstr ""
+
+#: templates/includes/header.html:67 templates/users/login.html:5
+#: templates/users/signup.html:5
+msgid "login_title"
+msgstr "login"
+
+#: templates/includes/item_card.html:18
+msgid "category"
+msgstr ""
+
+#: templates/includes/item_card.html:34
+msgid "tags"
+msgstr ""
+
+#: templates/includes/item_card.html:49
+#: templates/includes/statistic_item_card.html:49
+msgid "more_details"
+msgstr "more details"
+
+#: templates/includes/statistic_item_card.html:3
+msgid "nobody"
+msgstr ""
+
+#: templates/includes/statistic_item_card.html:35
+msgid "max_user_grade"
+msgstr "the user who gave the maximum grade"
+
+#: templates/includes/statistic_item_card.html:43
+msgid "min_user_grade"
+msgstr "the user who gave the minimum grade"
+
+#: templates/statistic/statistic_by_items.html:13
+#: templates/statistic/statistic_by_user.html:43
+#: templates/statistic/statistic_by_user.html:61
+#: templates/statistic/statistic_graded_items.html:15
+msgid "unformed"
+msgstr ""
+
+#: templates/statistic/statistic_by_user.html:11
+msgid "total_user_rating"
+msgstr "total of your grades"
+
+#: templates/statistic/statistic_by_user.html:21
+msgid "average_user_rating"
+msgstr "your average score"
+
+#: templates/statistic/statistic_by_user.html:33
+msgid "max_grade"
+msgstr "maximum grade"
+
+#: templates/statistic/statistic_by_user.html:51
+msgid "min_grade"
+msgstr "minimum grade"
+
+#: templates/statistic_base.html:10
+msgid "user_ratings"
+msgstr "your grades"
+
+#: templates/statistic_base.html:13
+msgid "items_user_ratings"
+msgstr "items with your grades"
+
+#: templates/statistic_base.html:16
+msgid "by_items"
+msgstr "by items"
+
+#: templates/users/login.html:26
+msgid "forgot_password"
+msgstr "forgot your password?"
+
+#: templates/users/login.html:27
+msgid "no_account"
+msgstr "no account?"
+
+#: templates/users/logout.html:5 templates/users/password_change_done.html:5
+#: templates/users/password_reset_complete.html:5
+#: templates/users/password_reset_done.html:5
+msgid "success"
+msgstr ""
+
+#: templates/users/logout.html:12
+msgid "logout_text"
+msgstr "you have successfully logged out of your account"
+
+#: templates/users/password_change.html:5 templates/users/profile.html:28
+msgid "password_change_title"
+msgstr "change password"
+
+#: templates/users/password_change_done.html:12
+msgid "password_change_done_text"
+msgstr "password changed successfully"
+
+#: templates/users/password_reset.html:5
+#: templates/users/password_reset_confirm.html:5
+msgid "reset_title"
+msgstr "reset password"
+
+#: templates/users/password_reset_complete.html:11
+msgid "password_reset_complite_text"
+msgstr "password reset successfully"
+
+#: templates/users/password_reset_done.html:11
+msgid "password_reset_done_text"
+msgstr "an email with a link has been sent to your email"
+
+#: templates/users/profile.html:27
+msgid "glass_of_coffee"
+msgstr "cup of coffee"
+
+#: templates/users/signup_email.html:2
+msgid "activate_email_title"
+msgstr "activate account"
+
+#: templates/users/signup_email.html:4
+msgid "activate_email_text"
+msgstr "follow the link to activate your account"
+
+#: templates/users/user_detail.html:7
+msgid "user_detail_title"
+msgstr "user information"
+
+#: templates/users/user_detail.html:28
+msgid "name"
+msgstr ""
+
+#: templates/users/user_detail.html:34 templates/users/user_detail.html:47
+#: templates/users/user_detail.html:69
+msgid "not_indicated"
+msgstr "not indicated"
+
+#: templates/users/user_detail.html:41
+msgid "last_name"
+msgstr "last name"
+
+#: templates/users/user_detail.html:54
+msgid "mail"
+msgstr ""
+
+#: templates/users/user_detail.html:63
+msgid "birthday"
+msgstr ""
+
+#: templates/users/user_detail.html:76
+msgid "count_drink_coffee"
+msgstr "number of cups of coffee drunk"
+
+#: users/backends.py:57
+msgid "message_acount_closed"
+msgstr "your account is blocked, a recovery letter has been sent to your email"
+
+#: users/views.py:43
+msgid "message_signup_success"
+msgstr "successful registration"
+
+#: users/views.py:70
+msgid "message_activate_success"
+msgstr "successful avtivate"
+
+#: users/views.py:75
+msgid "message_activate_error"
+msgstr "activation error because time limit exceeded"
+
+#: users/views.py:127
+msgid "message_profile_save_success"
+msgstr "profile changes saved successfully"
+
+#, fuzzy
+#~| msgid "password_change_done_text"
+#~ msgid "password_confirm_done_text"
+#~ msgstr "password changed successfully"

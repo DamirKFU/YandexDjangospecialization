@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}
+{% trans "about_title"|capfirst %}
+{% endblock title %}
+
+{% block content %}
+  <h1 class="pb-2 mb-0">{% trans "about_title"|capfirst %}</h1>
+  <hr>
+  <p>
+    {% trans "about_text" %}
+  </p>
+  <img src="{% static "img/cat.jpg" %}" class="img-fluid" alt="Responsive image">
+{% endblock content %}

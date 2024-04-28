@@ -1,0 +1,52 @@
+{% load static %}
+{% load i18n %}
+<div class="col-6 col-md-4 my-1 d-flex align-items-stretch">
+  <div class="card">
+    <img
+      class="img-fluid card-img-top"
+      {% if item.main_image %}
+        src="{{ item.main_image.get_image_413x413.url }}"
+      {% else %}
+        src="{% static 'img/image-holder.png' %}"
+      {% endif %}
+      alt="{% trans 'item_image'|capfirst %}"
+    >
+    <div class="card-body d-flex flex-column">
+      <h5 class="card-title">{{ item.name }}</h5>
+      <div class="border mb-3 rounded">
+        <div class="card-header">
+          {% trans "category"|capfirst %}
+        </div>
+        <ul class="list-group list-group-flush rounded">
+          <li class="list-group-item">{{ item.category.name }}</li>
+        </ul>
+      </div>
+      <div class="border mb-3 rounded">
+        <div class="card-header">
+          {% trans "description"|capfirst %}
+        </div>
+        <ul class="list-group list-group-flush rounded">
+            <li class="list-group-item">{{ item.text|safe|truncatewords_html:10 }}</li>
+        </ul>
+      </div>
+      <div class="border mb-3 rounded">
+        <div class="card-header">
+          {% trans "tags"|capfirst %}
+        </div>
+        <ul class="list-group list-group-flush">
+          {% for tag in item.tags.all %}
+            {% if forloop.last %}
+              <li class="list-group-item rounded-bottom">{{ tag.name }}</li>
+            {% else %}
+              <li class="list-group-item">{{ tag.name }}</li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+      {% if items %}
+      
+      {% endif %}
+      <a href={% url 'catalog:item_detail' pk=item.id %} class="mt-auto btn btn-md btn-block btn-primary">{% trans "more_details"|capfirst %}</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}
+{% trans "login_title"|capfirst %}
+{% endblock title %}
+
+
+{% block content %}
+  {% if messages %}
+    {% for message in messages %}
+      {% if  message.tags == "error" %}
+      <div class="alert alert-danger" role="alert">
+      {% else %}
+      <div class="alert alert-success" role="alert">
+      {% endif %}
+      {{ message }}
+      </div>
+    {% endfor %}
+  {% endif %}
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-6 col-lg-7">
+      <form method="post">
+        {% csrf_token %}
+        {% include "includes/form.html" with be_button=True form=form %}
+        <a href="{% url "users:password_reset" %}">{% trans "forgot_password"|capfirst %}</a>
+        <a href="{% url "users:signup" %}">{% trans "no_account"|capfirst %}</a>
+      </form>
+    </div>
+  </div>
+{% endblock content %}

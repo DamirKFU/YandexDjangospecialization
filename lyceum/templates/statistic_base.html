@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+  <nav class="navbar">
+    {% with request.resolver_match.view_name as view_name %}
+    <ul class="pagination pagination-lg d-flex flex-wrap w-100">
+      <li class="page-item col-6 col-md-4 {% if view_name == 'statistic:by-user' %}active{% endif %}">
+        <a class="text-center page-link fs-6" href="{% url 'statistic:by-user' %}" tabindex="-1">{% trans "user_ratings"|capfirst %}</a>
+      </li>
+      <li class="page-item col-6 col-md-4 {% if view_name == 'statistic:graded-items' %}active{% endif %}">
+        <a class="text-center page-link fs-6" href="{% url 'statistic:graded-items' %}">{% trans "items_user_ratings"|capfirst %}</a>
+      </li>
+      <li class="page-item col-6 col-md-4 {% if view_name == 'statistic:by-items' %}active{% endif %}">
+        <a class="text-center page-link fs-6" href="{% url 'statistic:by-items' %}">{% trans "by_items"|capfirst %}</a>
+      </li>
+    </ul>
+    {% endwith %}
+  </nav>
+  <h1 class="pb-2 mb-3">{% trans "statistics"|capfirst %}</h1>
+  
+  {% block statistic %}
+
+  {% endblock statistic %}
+{% endblock %}

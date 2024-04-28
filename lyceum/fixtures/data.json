@@ -1,0 +1,949 @@
+[
+{
+   "model": "catalog.tag",
+   "pk": 1,
+   "fields": {
+      "name": "Мужское",
+      "is_published": true,
+      "normalize_name": "muzhskoe",
+      "slug": "muzhskoe"
+   }
+},
+{
+   "model": "catalog.tag",
+   "pk": 2,
+   "fields": {
+      "name": "Женское",
+      "is_published": true,
+      "normalize_name": "zhenskoe",
+      "slug": "zhenskoe"
+   }
+},
+{
+   "model": "catalog.tag",
+   "pk": 3,
+   "fields": {
+      "name": "Детское",
+      "is_published": true,
+      "normalize_name": "detskoe",
+      "slug": "detskoe"
+   }
+},
+{
+   "model": "catalog.tag",
+   "pk": 4,
+   "fields": {
+      "name": "Подростковое",
+      "is_published": true,
+      "normalize_name": "podrostkovoe",
+      "slug": "podrostkovoe"
+   }
+},
+{
+   "model": "catalog.tag",
+   "pk": 5,
+   "fields": {
+      "name": "Взрослое",
+      "is_published": true,
+      "normalize_name": "vzrosloe",
+      "slug": "vzrosloe"
+   }
+},
+{
+   "model": "catalog.category",
+   "pk": 1,
+   "fields": {
+      "name": "Одежда",
+      "is_published": true,
+      "normalize_name": "odezhda",
+      "slug": "odezhda",
+      "weight": 100
+   }
+},
+{
+   "model": "catalog.category",
+   "pk": 2,
+   "fields": {
+      "name": "Техника",
+      "is_published": true,
+      "normalize_name": "tekhnika",
+      "slug": "tekhnika",
+      "weight": 100
+   }
+},
+{
+   "model": "catalog.item",
+   "pk": 1,
+   "fields": {
+      "name": "Юбка",
+      "is_published": true,
+      "normalize_name": "iubka",
+      "is_on_main": true,
+      "text": "<p>превосходно</p>",
+      "category": 1,
+      "created": "2024-03-05T09:51:06.625Z",
+      "updated": "2024-03-05T13:07:10.015Z",
+      "tags": [
+         2
+      ]
+   }
+},
+{
+   "model": "catalog.item",
+   "pk": 2,
+   "fields": {
+      "name": "Кросовок",
+      "is_published": true,
+      "normalize_name": "krosovok",
+      "is_on_main": true,
+      "text": "<p>превосходно</p>",
+      "category": 1,
+      "created": "2024-03-05T09:51:06.625Z",
+      "updated": "2024-03-06T22:55:02.253Z",
+      "tags": [
+         1
+      ]
+   }
+},
+{
+   "model": "catalog.item",
+   "pk": 3,
+   "fields": {
+      "name": "Компьютер",
+      "is_published": true,
+      "normalize_name": "kompiuter",
+      "is_on_main": true,
+      "text": "<p>превосходно</p>",
+      "category": 2,
+      "created": "2024-03-05T09:51:06.625Z",
+      "updated": "2024-03-06T22:55:52.282Z",
+      "tags": [
+         1,
+         2
+      ]
+   }
+},
+{
+   "model": "catalog.item",
+   "pk": 4,
+   "fields": {
+      "name": "Холодильник",
+      "is_published": true,
+      "normalize_name": "kholodilnik",
+      "is_on_main": true,
+      "text": "<p>превосходно</p>",
+      "category": 2,
+      "created": "2024-03-05T09:51:06.625Z",
+      "updated": "2024-03-05T09:51:06.625Z",
+      "tags": [
+         1
+      ]
+   }
+},
+{
+   "model": "catalog.item",
+   "pk": 5,
+   "fields": {
+      "name": "Футболка",
+      "is_published": true,
+      "normalize_name": "futbolka",
+      "is_on_main": false,
+      "text": "<p><span style=\"background-color: #e67e23;\"><strong>превосходно</strong></span></p>",
+      "category": 1,
+      "created": "2024-03-05T09:51:06.625Z",
+      "updated": "2024-03-05T09:51:06.625Z",
+      "tags": [
+         1,
+         3,
+         4
+      ]
+   }
+},
+{
+   "model": "catalog.itemmainimage",
+   "pk": 4,
+   "fields": {
+      "image": "catalog/abcd0057-93d7-48fe-bba5-6459a1897d77.jpg",
+      "item": 5
+   }
+},
+{
+   "model": "catalog.itemmainimage",
+   "pk": 5,
+   "fields": {
+      "image": "catalog/2850a773-3b1f-4794-9dce-38537ccf54c6.jpg",
+      "item": 4
+   }
+},
+{
+   "model": "catalog.itemmainimage",
+   "pk": 6,
+   "fields": {
+      "image": "catalog/962ccbd2-2741-47f5-8d89-16a01a4d7088.jpg",
+      "item": 1
+   }
+},
+{
+   "model": "catalog.itemmainimage",
+   "pk": 7,
+   "fields": {
+      "image": "catalog/b2643446-b9da-402a-a850-1e0fa2f2f503.png",
+      "item": 2
+   }
+},
+{
+   "model": "catalog.itemmainimage",
+   "pk": 8,
+   "fields": {
+      "image": "catalog/ceea36bf-a7e6-486a-8d78-9a00b61735f5.jpg",
+      "item": 3
+   }
+},
+{
+   "model": "catalog.itemsecondaryimage",
+   "pk": 3,
+   "fields": {
+      "image": "catalog/5704cf8a-d131-42d9-9492-bec2d0d64156.JPG",
+      "item": 5
+   }
+},
+{
+   "model": "catalog.itemsecondaryimage",
+   "pk": 4,
+   "fields": {
+      "image": "catalog/91bb79eb-4904-4929-9ba3-c140cb1b5288.webp",
+      "item": 5
+   }
+},
+{
+   "model": "catalog.itemsecondaryimage",
+   "pk": 5,
+   "fields": {
+      "image": "catalog/cc1f0bfc-8c0b-47ca-ae83-e49881ab1985.jpg",
+      "item": 5
+   }
+},
+{
+   "model": "rating.grade",
+   "pk": 6,
+   "fields": {
+      "user": 1,
+      "item": 2,
+      "grade": 4
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 1,
+   "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 2,
+   "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 3,
+   "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 4,
+   "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 5,
+   "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 6,
+   "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 7,
+   "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 8,
+   "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 9,
+   "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 10,
+   "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 11,
+   "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 12,
+   "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 13,
+   "fields": {
+      "name": "Can add user",
+      "content_type": 4,
+      "codename": "add_user"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 14,
+   "fields": {
+      "name": "Can change user",
+      "content_type": 4,
+      "codename": "change_user"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 15,
+   "fields": {
+      "name": "Can delete user",
+      "content_type": 4,
+      "codename": "delete_user"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 16,
+   "fields": {
+      "name": "Can view user",
+      "content_type": 4,
+      "codename": "view_user"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 17,
+   "fields": {
+      "name": "Can add content type",
+      "content_type": 5,
+      "codename": "add_contenttype"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 18,
+   "fields": {
+      "name": "Can change content type",
+      "content_type": 5,
+      "codename": "change_contenttype"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 19,
+   "fields": {
+      "name": "Can delete content type",
+      "content_type": 5,
+      "codename": "delete_contenttype"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 20,
+   "fields": {
+      "name": "Can view content type",
+      "content_type": 5,
+      "codename": "view_contenttype"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 21,
+   "fields": {
+      "name": "Can add session",
+      "content_type": 6,
+      "codename": "add_session"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 22,
+   "fields": {
+      "name": "Can change session",
+      "content_type": 6,
+      "codename": "change_session"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 23,
+   "fields": {
+      "name": "Can delete session",
+      "content_type": 6,
+      "codename": "delete_session"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 24,
+   "fields": {
+      "name": "Can view session",
+      "content_type": 6,
+      "codename": "view_session"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 25,
+   "fields": {
+      "name": "Can add категория",
+      "content_type": 7,
+      "codename": "add_category"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 26,
+   "fields": {
+      "name": "Can change категория",
+      "content_type": 7,
+      "codename": "change_category"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 27,
+   "fields": {
+      "name": "Can delete категория",
+      "content_type": 7,
+      "codename": "delete_category"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 28,
+   "fields": {
+      "name": "Can view категория",
+      "content_type": 7,
+      "codename": "view_category"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 29,
+   "fields": {
+      "name": "Can add товар",
+      "content_type": 8,
+      "codename": "add_item"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 30,
+   "fields": {
+      "name": "Can change товар",
+      "content_type": 8,
+      "codename": "change_item"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 31,
+   "fields": {
+      "name": "Can delete товар",
+      "content_type": 8,
+      "codename": "delete_item"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 32,
+   "fields": {
+      "name": "Can view товар",
+      "content_type": 8,
+      "codename": "view_item"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 33,
+   "fields": {
+      "name": "Can add тег",
+      "content_type": 9,
+      "codename": "add_tag"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 34,
+   "fields": {
+      "name": "Can change тег",
+      "content_type": 9,
+      "codename": "change_tag"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 35,
+   "fields": {
+      "name": "Can delete тег",
+      "content_type": 9,
+      "codename": "delete_tag"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 36,
+   "fields": {
+      "name": "Can view тег",
+      "content_type": 9,
+      "codename": "view_tag"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 37,
+   "fields": {
+      "name": "Can add дополнительное изображение",
+      "content_type": 10,
+      "codename": "add_itemsecondaryimage"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 38,
+   "fields": {
+      "name": "Can change дополнительное изображение",
+      "content_type": 10,
+      "codename": "change_itemsecondaryimage"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 39,
+   "fields": {
+      "name": "Can delete дополнительное изображение",
+      "content_type": 10,
+      "codename": "delete_itemsecondaryimage"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 40,
+   "fields": {
+      "name": "Can view дополнительное изображение",
+      "content_type": 10,
+      "codename": "view_itemsecondaryimage"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 41,
+   "fields": {
+      "name": "Can add главное изображение",
+      "content_type": 11,
+      "codename": "add_itemmainimage"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 42,
+   "fields": {
+      "name": "Can change главное изображение",
+      "content_type": 11,
+      "codename": "change_itemmainimage"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 43,
+   "fields": {
+      "name": "Can delete главное изображение",
+      "content_type": 11,
+      "codename": "delete_itemmainimage"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 44,
+   "fields": {
+      "name": "Can view главное изображение",
+      "content_type": 11,
+      "codename": "view_itemmainimage"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 45,
+   "fields": {
+      "name": "Can add оценка",
+      "content_type": 12,
+      "codename": "add_grade"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 46,
+   "fields": {
+      "name": "Can change оценка",
+      "content_type": 12,
+      "codename": "change_grade"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 47,
+   "fields": {
+      "name": "Can delete оценка",
+      "content_type": 12,
+      "codename": "delete_grade"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 48,
+   "fields": {
+      "name": "Can view оценка",
+      "content_type": 12,
+      "codename": "view_grade"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 49,
+   "fields": {
+      "name": "Can add дополнительное поле пользователя",
+      "content_type": 13,
+      "codename": "add_profile"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 50,
+   "fields": {
+      "name": "Can change дополнительное поле пользователя",
+      "content_type": 13,
+      "codename": "change_profile"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 51,
+   "fields": {
+      "name": "Can delete дополнительное поле пользователя",
+      "content_type": 13,
+      "codename": "delete_profile"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 52,
+   "fields": {
+      "name": "Can view дополнительное поле пользователя",
+      "content_type": 13,
+      "codename": "view_profile"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 53,
+   "fields": {
+      "name": "Can add user",
+      "content_type": 14,
+      "codename": "add_user"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 54,
+   "fields": {
+      "name": "Can change user",
+      "content_type": 14,
+      "codename": "change_user"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 55,
+   "fields": {
+      "name": "Can delete user",
+      "content_type": 14,
+      "codename": "delete_user"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 56,
+   "fields": {
+      "name": "Can view user",
+      "content_type": 14,
+      "codename": "view_user"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 57,
+   "fields": {
+      "name": "Can add обратная связь",
+      "content_type": 15,
+      "codename": "add_feedback"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 58,
+   "fields": {
+      "name": "Can change обратная связь",
+      "content_type": 15,
+      "codename": "change_feedback"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 59,
+   "fields": {
+      "name": "Can delete обратная связь",
+      "content_type": 15,
+      "codename": "delete_feedback"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 60,
+   "fields": {
+      "name": "Can view обратная связь",
+      "content_type": 15,
+      "codename": "view_feedback"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 61,
+   "fields": {
+      "name": "Can add журнал состояния",
+      "content_type": 16,
+      "codename": "add_statuslog"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 62,
+   "fields": {
+      "name": "Can change журнал состояния",
+      "content_type": 16,
+      "codename": "change_statuslog"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 63,
+   "fields": {
+      "name": "Can delete журнал состояния",
+      "content_type": 16,
+      "codename": "delete_statuslog"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 64,
+   "fields": {
+      "name": "Can view журнал состояния",
+      "content_type": 16,
+      "codename": "view_statuslog"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 65,
+   "fields": {
+      "name": "Can add данные автора",
+      "content_type": 17,
+      "codename": "add_feedbackauthor"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 66,
+   "fields": {
+      "name": "Can change данные автора",
+      "content_type": 17,
+      "codename": "change_feedbackauthor"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 67,
+   "fields": {
+      "name": "Can delete данные автора",
+      "content_type": 17,
+      "codename": "delete_feedbackauthor"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 68,
+   "fields": {
+      "name": "Can view данные автора",
+      "content_type": 17,
+      "codename": "view_feedbackauthor"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 69,
+   "fields": {
+      "name": "Can add файлы обратной связи",
+      "content_type": 18,
+      "codename": "add_feedbackfile"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 70,
+   "fields": {
+      "name": "Can change файлы обратной связи",
+      "content_type": 18,
+      "codename": "change_feedbackfile"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 71,
+   "fields": {
+      "name": "Can delete файлы обратной связи",
+      "content_type": 18,
+      "codename": "delete_feedbackfile"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 72,
+   "fields": {
+      "name": "Can view файлы обратной связи",
+      "content_type": 18,
+      "codename": "view_feedbackfile"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 73,
+   "fields": {
+      "name": "Can add kv store",
+      "content_type": 19,
+      "codename": "add_kvstore"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 74,
+   "fields": {
+      "name": "Can change kv store",
+      "content_type": 19,
+      "codename": "change_kvstore"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 75,
+   "fields": {
+      "name": "Can delete kv store",
+      "content_type": 19,
+      "codename": "delete_kvstore"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 76,
+   "fields": {
+      "name": "Can view kv store",
+      "content_type": 19,
+      "codename": "view_kvstore"
+   }
+},
+{
+   "model": "auth.user",
+   "pk": 1,
+   "fields": {
+      "password": "pbkdf2_sha256$600000$UpNKhil2yEv1drXO9FZBv5$XPTltCYwtXZquiAV7XeU3h8MSUTSsNLCgnZ43pMNby8=",
+      "last_login": "2024-03-26T22:24:58.828Z",
+      "is_superuser": false,
+      "username": "alucard",
+      "first_name": "3213",
+      "last_name": "",
+      "email": "damirsakhbievgg@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-03-26T22:24:52.014Z",
+      "groups": [],
+      "user_permissions": []
+   }
+},
+{
+   "model": "users.profile",
+   "pk": 1,
+   "fields": {
+      "user": 1,
+      "birthday": "2024-03-27",
+      "image": "",
+      "coffee_count": 9,
+      "attempts_count": 0,
+      "deactivation_date": null
+   }
+}
+]

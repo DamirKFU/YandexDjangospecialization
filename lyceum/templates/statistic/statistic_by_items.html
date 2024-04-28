@@ -1,0 +1,17 @@
+{% extends "statistic_base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block statistic %}
+<div class="row">
+  {% if items %}
+    {% for item in items %}
+        {% include "includes/statistic_item_card.html" %}
+
+    {% endfor %}
+  {% else %}
+    <b><i>{% trans "unformed" %}</i></b>
+  {% endif %}
+
+</div>
+{% endblock %}

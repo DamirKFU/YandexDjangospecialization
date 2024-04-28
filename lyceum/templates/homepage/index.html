@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}
+{% trans "homepage_title"|capfirst %}
+{% endblock title %}
+
+{% block content %}
+  {% if messages %}
+    {% for message in messages %}
+      {% if  message.tags == "error" %}
+      <div class="alert alert-danger" role="alert">
+      {% else %}
+      <div class="alert alert-success" role="alert">
+      {% endif %}
+      {{ message }}
+      </div>
+    {% endfor %}
+  {% endif %}
+  <h1 class="pb-2 mb-3">{% trans "homepage_title"|capfirst %}</h1>
+  <hr>
+  {% if items %}
+    <div class="row">
+      {% for item in items%}
+        {% include "includes/item_card.html" %}
+      {% endfor %}
+    </div>
+  {% else %}
+    <h1 class="pb-2 mb-0">{% trans "empty" %}</h1>
+  {% endif %}
+{% endblock content %}

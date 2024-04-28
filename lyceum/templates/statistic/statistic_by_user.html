@@ -1,0 +1,69 @@
+{% extends "statistic_base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block statistic %}
+
+<div class="row">
+  <div class="col-6">
+    <div class="card border">
+      <div class="card-body">
+        <h5 class="card-title">{% trans "total_user_rating"|capfirst %}</h5>
+        <p class="card-text h1 text-primary">
+          {{ query.count_grades|default:0 }}
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="card border">
+      <div class="card-body">
+        <h5 class="card-title">{% trans "average_user_rating"|capfirst %}</h5>
+        <p class="card-text h1 text-primary">
+          {{ query.avg_grades|floatformat|default:0 }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="accordion mt-4" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        {% trans "max_grade"|capfirst %}
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        {% if items|first %}
+        {% with item=items|first %}
+          {% include "includes/item_card.html" %}
+        {% endwith %}
+        {% else %}
+          <b><i>{% trans "unformed" %}</i></b>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        {% trans "min_grade"|capfirst %}
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        {% if items|last %}
+        {% with item=items|last %}
+          {% include "includes/item_card.html" %}
+        {% endwith %}
+        {% else %}
+          <b><i>{% trans "unformed" %}</i></b>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+
+
+{% block title %}
+{% trans "profile_title"|capfirst %}: {{ user.username }}
+{% endblock %}
+
+
+{% block content %}
+{% if messages %}
+  {% for message in messages %}
+    {% if  message.tags == "error" %}
+    <div class="alert alert-danger" role="alert">
+    {% else %}
+    <div class="alert alert-success" role="alert">
+    {% endif %}
+    {{ message }}
+    </div>
+  {% endfor %}
+{% endif %}
+<h1>{{ user.username }}</h1>
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {% include "includes/form.html" with be_button=True form=form %}
+  <a href="{% url "homepage:coffee" %}">{% trans "glass_of_coffee" %}</a>
+  <a href="{% url "users:password_change" %}">{% trans "password_change_title" %}</a>
+</form>
+{% endblock content %}

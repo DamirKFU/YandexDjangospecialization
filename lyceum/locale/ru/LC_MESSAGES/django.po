@@ -1,0 +1,339 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-30 15:24+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: catalog/views.py:39
+msgid "message_grade_save_success"
+msgstr "ваша оценка успешно сохранена"
+
+#: catalog/views.py:45 templates/catalog/item_list.html:6
+#: templates/catalog/item_list.html:14 templates/includes/header.html:28
+msgid "item_list_title"
+msgstr "список товаров"
+
+#: catalog/views.py:97 templates/catalog/item_list.html:17
+msgid "new"
+msgstr "новинки"
+
+#: catalog/views.py:118 templates/catalog/item_list.html:20
+msgid "friday"
+msgstr "пятница"
+
+#: catalog/views.py:133 templates/catalog/item_list.html:23
+msgid "unverified"
+msgstr "непроверенное"
+
+#: feedback/models.py:11
+msgid "new_status"
+msgstr "получено"
+
+#: feedback/models.py:12
+msgid "pending_status"
+msgstr "в обработке"
+
+#: feedback/models.py:13
+msgid "complete_status"
+msgstr "ответ дан"
+
+#: feedback/views.py:41
+msgid "message_form_success"
+msgstr "форма успешно отправлена"
+
+#: lyceum/settings.py:139
+msgid "Russian"
+msgstr ""
+
+#: lyceum/settings.py:140
+msgid "English"
+msgstr ""
+
+#: templates/about/description.html:6 templates/about/description.html:10
+#: templates/includes/header.html:23
+msgid "about_title"
+msgstr "о проекте"
+
+#: templates/about/description.html:13
+msgid "about_text"
+msgstr "Очень убедительное описание, которое заставит вас сюда вернуться"
+
+#: templates/catalog/item_detail.html:6
+msgid "item_detail_title"
+msgstr "о товаре"
+
+#: templates/catalog/item_detail.html:23
+#: templates/includes/statistic_item_card.html:19
+msgid "grade_count"
+msgstr "количество оценок"
+
+#: templates/catalog/item_detail.html:24
+#: templates/includes/statistic_item_card.html:27
+msgid "rating"
+msgstr "рейтинг"
+
+#: templates/catalog/item_detail.html:24
+msgid "no_rating"
+msgstr "не оценено"
+
+#: templates/catalog/item_detail.html:33 templates/includes/item_card.html:26
+msgid "description"
+msgstr "описание"
+
+#: templates/catalog/item_detail.html:47 templates/catalog/item_detail.html:77
+#: templates/includes/item_card.html:12
+#: templates/includes/statistic_item_card.html:13
+msgid "item_image"
+msgstr "изображение товара"
+
+#: templates/catalog/item_detail.html:64
+msgid "delete"
+msgstr "удалить"
+
+#: templates/catalog/item_list.html:46 templates/homepage/index.html:30
+#: templates/users/user_list.html:22
+msgid "empty"
+msgstr "пусто"
+
+#: templates/feedback/feedback.html:6 templates/includes/header.html:33
+msgid "feedback_title"
+msgstr "обратная связь"
+
+#: templates/homepage/echo.html:6
+msgid "echo_title"
+msgstr "эхо"
+
+#: templates/homepage/echo.html:13 templates/includes/form.html:37
+msgid "submit"
+msgstr "отправить"
+
+#: templates/homepage/index.html:6 templates/homepage/index.html:21
+msgid "homepage_title"
+msgstr "домашная страница"
+
+#: templates/includes/footer.html:20
+msgid "go"
+msgstr "поехали"
+
+#: templates/includes/header.html:8
+msgid "brand_name"
+msgstr "супер-бренд"
+
+#: templates/includes/header.html:18 templates/users/logout.html:13
+#: templates/users/password_change_done.html:13
+#: templates/users/password_reset_complete.html:12
+#: templates/users/password_reset_done.html:12
+msgid "home"
+msgstr "главная"
+
+#: templates/includes/header.html:38 templates/users/user_list.html:7
+#: templates/users/user_list.html:11
+msgid "user_list_title"
+msgstr "список пользователей"
+
+#: templates/includes/header.html:45
+msgid "admin_title"
+msgstr "админка"
+
+#: templates/includes/header.html:51 templates/users/profile.html:7
+msgid "profile_title"
+msgstr "профиль"
+
+#: templates/includes/header.html:56
+msgid "logout_title"
+msgstr "выйти"
+
+#: templates/includes/header.html:61 templates/statistic_base.html:21
+msgid "statistics"
+msgstr "статистика"
+
+#: templates/includes/header.html:67 templates/users/login.html:5
+#: templates/users/signup.html:5
+msgid "login_title"
+msgstr "войти"
+
+#: templates/includes/item_card.html:18
+msgid "category"
+msgstr "категория"
+
+#: templates/includes/item_card.html:34
+msgid "tags"
+msgstr "теги"
+
+#: templates/includes/item_card.html:49
+#: templates/includes/statistic_item_card.html:49
+msgid "more_details"
+msgstr "подробнее"
+
+#: templates/includes/statistic_item_card.html:3
+msgid "nobody"
+msgstr "никто"
+
+#: templates/includes/statistic_item_card.html:35
+msgid "max_user_grade"
+msgstr "пользователь который поставил максимальную оценку"
+
+#: templates/includes/statistic_item_card.html:43
+msgid "min_user_grade"
+msgstr "пользователь который поставил минимальную оценку"
+
+#: templates/statistic/statistic_by_items.html:13
+#: templates/statistic/statistic_by_user.html:43
+#: templates/statistic/statistic_by_user.html:61
+#: templates/statistic/statistic_graded_items.html:15
+msgid "unformed"
+msgstr "не сформирована"
+
+#: templates/statistic/statistic_by_user.html:11
+msgid "total_user_rating"
+msgstr "всего ваших оценок"
+
+#: templates/statistic/statistic_by_user.html:21
+msgid "average_user_rating"
+msgstr "ваша средняя оценка"
+
+#: templates/statistic/statistic_by_user.html:33
+msgid "max_grade"
+msgstr "максимальная оценка"
+
+#: templates/statistic/statistic_by_user.html:51
+msgid "min_grade"
+msgstr "минимальная оценка"
+
+#: templates/statistic_base.html:10
+msgid "user_ratings"
+msgstr "ваши оценки"
+
+#: templates/statistic_base.html:13
+msgid "items_user_ratings"
+msgstr "товары с вашими оценками"
+
+#: templates/statistic_base.html:16
+msgid "by_items"
+msgstr "по товарам"
+
+#: templates/users/login.html:26
+msgid "forgot_password"
+msgstr "забыли пароль?"
+
+#: templates/users/login.html:27
+msgid "no_account"
+msgstr "нет акаунта?"
+
+#: templates/users/logout.html:5 templates/users/password_change_done.html:5
+#: templates/users/password_reset_complete.html:5
+#: templates/users/password_reset_done.html:5
+msgid "success"
+msgstr "успешно"
+
+#: templates/users/logout.html:12
+msgid "logout_text"
+msgstr "вы успешно вышли из своей учетной записи"
+
+#: templates/users/password_change.html:5 templates/users/profile.html:28
+msgid "password_change_title"
+msgstr "смена пароля"
+
+#: templates/users/password_change_done.html:12
+msgid "password_change_done_text"
+msgstr "вы успешно сменили пароль"
+
+#: templates/users/password_reset.html:5
+#: templates/users/password_reset_confirm.html:5
+msgid "reset_title"
+msgstr "востановление акаунта"
+
+#: templates/users/password_reset_complete.html:11
+msgid "password_reset_complite_text"
+msgstr "ваш акаунт успешно востоновлен"
+
+#: templates/users/password_reset_done.html:11
+msgid "password_reset_done_text"
+msgstr "На вашу почту было отправлено письмо с ссылкой"
+
+#: templates/users/profile.html:27
+msgid "glass_of_coffee"
+msgstr "чашка кофе"
+
+#: templates/users/signup_email.html:2
+msgid "activate_email_title"
+msgstr "активация акаунта"
+
+#: templates/users/signup_email.html:4
+msgid "activate_email_text"
+msgstr "перейдите по ссылке, чтобы активировать свой аккаунт"
+
+#: templates/users/user_detail.html:7
+msgid "user_detail_title"
+msgstr "информация пользователя"
+
+#: templates/users/user_detail.html:28
+msgid "name"
+msgstr "имя"
+
+#: templates/users/user_detail.html:34 templates/users/user_detail.html:47
+#: templates/users/user_detail.html:69
+msgid "not_indicated"
+msgstr "неуказано"
+
+#: templates/users/user_detail.html:41
+msgid "last_name"
+msgstr "фамилия"
+
+#: templates/users/user_detail.html:54
+msgid "mail"
+msgstr "почта"
+
+#: templates/users/user_detail.html:63
+msgid "birthday"
+msgstr "день рождения"
+
+#: templates/users/user_detail.html:76
+msgid "count_drink_coffee"
+msgstr "количество выпитых чашек кофе"
+
+#: users/backends.py:57
+msgid "message_acount_closed"
+msgstr ""
+"ваш аккаунт заблокирован, на вашу электронную почту отправлено письмо о "
+"восстановлении"
+
+#: users/views.py:43
+msgid "message_signup_success"
+msgstr "успешная регистрация"
+
+#: users/views.py:70
+msgid "message_activate_success"
+msgstr "успешная активация"
+
+#: users/views.py:75
+msgid "message_activate_error"
+msgstr "ошибка активации, поскольку превышен лимит времени"
+
+#: users/views.py:127
+msgid "message_profile_save_success"
+msgstr "изменения профиля успешно сохранены"
+
+#~ msgid "avg_grades"
+#~ msgstr "средняя оценка"
+
+#, fuzzy
+#~| msgid "grade_count"
+#~ msgid "grades_count"
+#~ msgstr "количество оценок"
